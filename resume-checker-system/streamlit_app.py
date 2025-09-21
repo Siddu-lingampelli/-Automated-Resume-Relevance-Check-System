@@ -3,13 +3,15 @@ import sys
 import os
 
 # Add the frontend directory to the Python path
-frontend_path = os.path.join(os.path.dirname(__file__), "frontend")
+frontend_path = os.path.dirname(__file__)
 sys.path.append(frontend_path)
 
 # Import the main app components
-from pages.1_JobDescriptions import show as show_job_descriptions
-from pages.2_ResumeEvaluation import show as show_resume_evaluation
-from pages.3_Dashboard import show as show_dashboard
+from pages import (
+    JobDescriptions as page_job_descriptions,
+    ResumeEvaluation as page_resume_evaluation,
+    Dashboard as page_dashboard
+)
 
 st.set_page_config(
     page_title="Resume Checker System",
@@ -28,11 +30,11 @@ def main():
     )
     
     if page == "Job Descriptions":
-        show_job_descriptions()
+        page_job_descriptions.show()
     elif page == "Resume Evaluation":
-        show_resume_evaluation()
+        page_resume_evaluation.show()
     elif page == "Dashboard":
-        show_dashboard()
+        page_dashboard.show()
 
 if __name__ == "__main__":
     main()
