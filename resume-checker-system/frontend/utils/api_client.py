@@ -1,9 +1,9 @@
 import requests
-import streamlit as st
 from typing import Dict, Any, List, Union
+import os
 
-# Get the backend URL from Streamlit secrets or use localhost for local development
-BASE_URL = st.secrets.get("BACKEND_URL", "http://127.0.0.1:8000")
+# Default to localhost if no environment variable is set
+BASE_URL = "http://127.0.0.1:8000"
 
 def upload_jd(jd_data: Dict[str, Any]) -> Dict[str, Any]:
     try:
