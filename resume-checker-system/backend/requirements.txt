@@ -1,0 +1,14 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+psycopg2-binary
+pydantic
+PyMuPDF
+docx2txt
+sentence-transformers
+nltk
+spacy
+requests
+pytest
+fastapi
+uvicorn[standard]
