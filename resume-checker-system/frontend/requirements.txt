@@ -1,2 +1,6 @@
 streamlit
+PyPDF2
+python-docx
 requests
+python-multipart
+google-generativeai
